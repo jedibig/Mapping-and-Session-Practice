@@ -23,6 +23,6 @@ public class C_Product {
     @Id
     private long sku;
     private String name;
-    @ManyToMany @Cascade(value = CascadeType.PERSIST)
+    @ManyToMany
     private List<C_Store> stores;
 }

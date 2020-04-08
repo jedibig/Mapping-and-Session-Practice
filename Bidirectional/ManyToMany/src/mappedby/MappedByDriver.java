@@ -5,6 +5,7 @@ import mappedby.dto.M_Product;
 import mappedby.dto.M_Store;
 import org.hibernate.Session;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,11 +15,13 @@ public class MappedByDriver {
         M_Store chicago = M_Store.builder()
                 .storeId(252)
                 .city("Chicago")
+                .productList(new ArrayList<>())
                 .build();
 
         M_Store miami = M_Store.builder()
                 .storeId(657)
                 .city("Miami")
+                .productList(new ArrayList<>())
                 .build();
 
         List<M_Store> MStoreList = Arrays.asList(chicago,miami);

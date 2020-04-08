@@ -5,6 +5,7 @@ import regular.dto.Product;
 import regular.dto.Store;
 import org.hibernate.Session;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,11 +15,13 @@ public class RegularDriver {
         Store chicago = Store.builder()
                 .storeId(252)
                 .city("Chicago")
+                .productList(new ArrayList<>())
                 .build();
 
         Store miami = Store.builder()
                 .storeId(657)
                 .city("Miami")
+                .productList(new ArrayList<>())
                 .build();
 
         List<Store> storeList = Arrays.asList(chicago,miami);
